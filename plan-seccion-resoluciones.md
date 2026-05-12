@@ -359,7 +359,8 @@ add_shortcode('normativa_cipba', function () {
 .cipba-norm-toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
 .cipba-search-wrap { position: relative; flex: 1 1 260px; min-width: 200px; }
 .cipba-search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); pointer-events: none; }
-.cipba-search-input { width: 100%; padding: 10px 14px 10px 36px; border-radius: 6px; border: 1.5px solid #e0e6f0; background: #f8f9fc; font-size: 13.5px; color: #1a2540; outline: none; box-sizing: border-box; }
+.cipba-search-input { width: 100% !important; padding: 10px 14px 10px 36px !important; border-radius: 6px; border: 1.5px solid #e0e6f0 !important; background: #f8f9fc !important; font-size: 13.5px !important; color: #1a2540 !important; outline: none !important; box-sizing: border-box !important; }
+
 .cipba-search-input:focus { border-color: #2563b0; }
 .cipba-chips-wrap { display: flex; gap: 6px; flex-wrap: wrap; }
 .cipba-chip { padding: 8px 14px; border-radius: 20px; border: 1.5px solid #e0e6f0; background: white; color: #6b7a99; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: all 0.15s; }
