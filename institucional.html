@@ -67,10 +67,25 @@ const navLinks = [
   { label: 'Inicio', href: 'index.html' },
   { label: 'Matrícula', href: 'index.html#tramites', sub: ['Nueva Matrícula', 'Reinscripción', 'Baja Temporal', 'Certificados'] },
   { label: 'Visado', href: 'index.html#visado', sub: ['Visado Online', 'Tasas y Aranceles', 'Honorarios Mínimos', 'Visadores'] },
-  { label: 'Capacitación', href: 'index.html#capacitacion' },
-  { label: 'Normativa', href: 'index.html#normativa' },
-  { label: 'Institucional', href: 'institucional.html', active: true, sub: ['Autoridades', 'Partidos', 'Sedes'] },
-  { label: 'Noticias', href: 'index.html#noticias' },
+  { label: 'Normativa', href: '#normativa',
+    sub: [
+        { label: 'Ley Colegial', href: 'index.html#ley-colegial' },
+        { label: 'Código de Ética', href: 'index.html#codigo-etica' },
+        { label: 'Resoluciones', href: 'index.html#resoluciones' },
+        { label: 'Incumbencias', href: 'index.html#incumbencias' },
+        { label: 'Ley Previsional / Caja Previsional', href: 'index.html#ley-previsional' },
+        { label: 'Reglamento Interno', href: 'index.html#reglamento-interno' }
+
+    ]
+   },
+  { label: 'Institucional', href: 'institucional.html', active: true,
+    sub: [
+      { label: 'Autoridades', href: 'institucional.html#autoridades' }, 
+      { label: 'Partidos', href: 'institucional.html#partidos' }, 
+      { label: 'Sedes', href: 'institucional.html#sedes' }, 
+      { label: 'Subcomisiones', href: 'subcomisiones.html' }
+    ] },  
+  { label: 'Noticias', href: 'index.html#noticias' }, 
   { label: 'Contacto', href: 'index.html#contacto' },
 ];
 
@@ -87,7 +102,7 @@ const Navbar = ({ scrolled }) => {
     }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
         <a href="index.html" style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="uploads/logo-cipba-vii.png" alt="CIPBA Distrito VII" style={{ height: 46, width: 'auto', filter: 'brightness(0) invert(1)' }}/>
+          <img src="logo-cipba-vii-2.png" alt="CIPBA Distrito VII" style={{ height: 46, width: 'auto', filter: 'brightness(0) invert(1)' }}/>
         </a>
         <div style={{ display: 'flex', gap: 2, alignItems: 'center' }} className="desktop-nav">
           {navLinks.map(link => (
@@ -630,7 +645,7 @@ const Footer = () => (
       <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 40, marginBottom: 40 }} className="footer-grid">
         <div>
           <div style={{ marginBottom: 16 }}>
-            <img src="uploads/logo-cipba-vii.png" alt="CIPBA Distrito VII" style={{ height: 52, width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.9 }}/>
+            <img src="logo-cipba-vii-2.png" alt="CIPBA Distrito VII" style={{ height: 52, width: 'auto', filter: 'brightness(0) invert(1)', opacity: 0.9 }}/>
           </div>
           <p style={{ fontSize: 13.5, lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', maxWidth: 280, textWrap: 'pretty' }}>
             Entidad pública no estatal creada por Ley 10.416. Ejercicio profesional habilitado en 23 partidos de la zona oeste y norte del Gran Buenos Aires.
@@ -667,6 +682,13 @@ const App = () => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const el = document.querySelector(hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, []);
 
   return (

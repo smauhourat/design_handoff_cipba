@@ -641,3 +641,93 @@ astra-cipba-child/
 
 ### 10. Costo total del stack
 **$0 USD en licencias de software.** Solo se paga hosting + dominio. Todos los plugins listados son free indefinidos (no son trials).
+
+{
+  "menu": [
+    {
+      "label": "Inicio",
+      "slug": "inicio",
+      "submenu": []
+    },
+    {
+      "label": "Institucional",
+      "slug": "institucional",
+      "submenu": [
+        { "label": "Quiénes Somos / Historia", "slug": "quienes-somos" },
+        { "label": "Consejo Directivo / Autoridades", "slug": "consejo-directivo" },
+        { "label": "Sedes y Delegaciones", "slug": "sedes-delegaciones" },
+        {
+          "label": "Subcomisiones",
+          "slug": "subcomisiones",
+          "submenu": [
+            { "label": "Civil", "slug": "subcomision-civil" },
+            { "label": "Mecánica", "slug": "subcomision-mecanica" },
+            { "label": "Eléctrica", "slug": "subcomision-electrica" },
+            { "label": "Ambiental", "slug": "subcomision-ambiental" },
+            { "label": "Agrimensura", "slug": "subcomision-agrimensura" },
+            { "label": "Seguridad e Higiene", "slug": "subcomision-seguridad-higiene" },
+            { "label": "Peritos", "slug": "subcomision-peritos" },
+            { "label": "Alimentos", "slug": "subcomision-alimentos" }
+          ]
+        },
+        { "label": "Memoria / Asamblea", "slug": "memoria-asamblea" }
+      ]
+    },
+    {
+      "label": "Normativas",
+      "slug": "normativas",
+      "submenu": [
+        { "label": "Ley Colegial", "slug": "ley-colegial" },
+        { "label": "Código de Ética", "slug": "codigo-etica" },
+        { "label": "Resoluciones", "slug": "resoluciones" },
+        { "label": "Incumbencias", "slug": "incumbencias" },
+        { "label": "Ley Previsional / Caja Previsional", "slug": "ley-previsional" },
+        { "label": "Reglamento Interno", "slug": "reglamento-interno" }
+      ]
+    },
+    {
+      "label": "Ejercicio Profesional",
+      "slug": "ejercicio-profesional",
+      "submenu": [
+        { "label": "Honorarios Mínimos Vigentes", "slug": "honorarios-minimos" },
+        { "label": "Modelos de Contratos", "slug": "modelos-contratos" },
+        { "label": "Fiscalización", "slug": "fiscalizacion" }
+      ]
+    },
+    {
+      "label": "Trámites / Autogestión",
+      "slug": "tramites-autogestion",
+      "submenu": [
+        { "label": "Inscripción / Matriculación", "slug": "inscripcion-matriculacion" },
+        { "label": "Rehabilitación", "slug": "rehabilitacion" },
+        { "label": "Baja", "slug": "baja" },
+        { "label": "Solicitud de Credencial / Carnet", "slug": "credencial-carnet" },
+        { "label": "Pago de Matrícula", "slug": "pago-matricula" },
+        { "label": "Visados Online", "slug": "visados-online" },
+        { "label": "Certificados", "slug": "certificados" },
+        { "label": "Informes ANSV / TAD", "slug": "informes-ansv-tad" },
+        { "label": "Peritos", "slug": "peritos" }
+      ]
+    },
+    {
+      "label": "Registro de Profesionales",
+      "slug": "registro-profesionales",
+      "submenu": []
+    },
+    {
+      "label": "Novedades",
+      "slug": "novedades",
+      "submenu": [
+        { "label": "Eventos y Noticias", "slug": "eventos-noticias" },
+        { "label": "Ofertas Laborales", "slug": "ofertas-laborales" },
+        { "label": "Convenios y Beneficios", "slug": "convenios-beneficios" },
+        { "label": "Preguntas Frecuentes", "slug": "preguntas-frecuentes" }
+      ]
+    },
+    {
+      "label": "Contacto",
+      "slug": "contacto",
+      "submenu": []
+    }
+  ]
+}
