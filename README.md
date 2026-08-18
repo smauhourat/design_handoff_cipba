@@ -542,102 +542,11 @@ design_handoff_cipba/
 
 ---
 
-## Notas para el desarrollador WordPress (stack 100% free)
+## Notas para el desarrollador WordPress
 
-### 1. Setup inicial
-1. Instalar **Astra** (free) desde el repositorio de WP.
-2. Crear y activar un **child theme de Astra** — imprescindible para CSS custom, JS y templates PHP de los listados.
-3. Instalar **Elementor** (free).
-4. Instalar los plugins free imprescindibles:
-   - **Elementor Header & Footer Builder** (by Brainstorm Force) — para construir header y footer con Elementor sin necesidad de Pro.
-   - **Max Mega Menu** — dropdowns multi-columna del navbar.
-   - **myStickymenu** — header sticky con cambio de estilo al scrollear.
-   - **Smart Slider 3** — slider del hero de la home.
-   - **Fluent Forms** — formulario de contacto.
-   - **CPT UI** + **Pods** (o **Meta Box**) — CPTs y campos custom con repeaters.
-   - **Search & Filter** — filtros AJAX para Resoluciones / Noticias.
-   - **PDF Embedder** — vista previa de PDFs en Normativa.
-   - **Rank Math** — SEO.
-   - **LiteSpeed Cache** o **WP Super Cache** — performance.
-   - **Complianz** (free tier) — cookies y políticas.
-
-### 2. Configuración Astra Free
-- **Apariencia → Personalizar → Tipografía**: cargar **Lato** (cuerpo) y **Roboto Condensed** (títulos H1–H6).
-- **Apariencia → Personalizar → Colores**: configurar los tokens (`#0d2d5e`, `#1a4a8a`, `#2563b0`, `#2a9e2a`, etc.).
-- **Plantilla de página**: para todas las páginas del prototipo, usar **Elementor Canvas** (sin header/footer del theme) — el header/footer custom de Elementor Header & Footer Builder se encarga.
-
-### 3. Configuración Elementor Free
-- **Site Settings → Global Colors**: cargar los design tokens.
-- **Site Settings → Global Fonts**: cargar Lato (Default) y Roboto Condensed (Heading).
-- Para componentes complejos (cards con hover translateY, grids auto-fill, gradientes): usar **widget HTML** + CSS del child theme.
-
-### 4. Estructura del child theme
-```
-astra-cipba-child/
-├── style.css                      ← variables CSS (design tokens) + componentes
-├── functions.php                  ← enqueue, registros de CPTs, hooks
-├── assets/
-│   ├── js/
-│   │   ├── sticky-header.js       ← toggle clase .scrolled al pasar 40px
-│   │   ├── subcomisiones-search.js
-│   │   └── partidos-search.js
-│   ├── css/
-│   │   ├── components.css
-│   │   └── pages.css
-│   └── logo.png
-└── template-parts/
-    ├── subcomisiones-list.php     ← si se opta por CPT
-    ├── autoridades-list.php       ← si se opta por CPT
-    ├── sedes-list.php             ← si se opta por CPT
-    └── resoluciones-list.php      ← con Search & Filter
-```
-
-### 5. Header + Footer
-- Crear las plantillas con **Elementor Header & Footer Builder**:
-  - **TopBar** (display location: Before Header): barra azul oscura con teléfono, email, horario.
-  - **Header**: logo, menú principal (Max Mega Menu en el menú) y CTA verde "Visado Online".
-  - **Footer**: 4 columnas + copyright.
-- **Sticky con cambio de fondo**: configurar **myStickymenu** apuntando al selector de la plantilla del header. Agregar JS propio en el child theme que también agregue clase `.scrolled` al pasar 40px de scroll, y CSS que aplique `background: rgba(13,45,94,0.98)` + `backdrop-filter: blur(8px)` cuando esté esa clase.
-
-### 6. Megamenú con Max Mega Menu
-- Activar Max Mega Menu sobre el menú principal de WP.
-- Configurar los ítems con dropdown (Matrícula, Visado, Institucional) como mega menus.
-- Para "Institucional": sub-items Autoridades, Partidos, Sedes, **Subcomisiones**.
-- Estilizar los dropdowns con CSS del child theme: fondo blanco, border-top 3px verde, sombra `0 8px 32px rgba(0,0,0,0.15)`.
-
-### 7. Formulario de contacto con Fluent Forms
-- Crear el form con campos: nombre, email, teléfono, asunto (select), mensaje.
-- Destino: `info@cipba.org`.
-- Embeber en la sección Contacto de la home con el widget Shortcode de Elementor: `[fluentform id="X"]`.
-- Aplicar el CSS del prototipo desde el child theme (clases `.ff-el-input--input`, focus `#2563b0`, error `#c0392b`).
-
-### 8. Hero slider de la home con Smart Slider 3
-- Crear un slider con 3 slides, auto-rotación cada 6s, fade transition.
-- Cada slide con su background gradiente azul (varía por slide) y patrón SVG decorativo.
-- Indicadores: pills con fondo `#2a9e2a` (activo) / `rgba(255,255,255,0.35)`.
-- Insertar el slider en la home con el widget Smart Slider 3 que se integra con Elementor.
-
-### 9. Resumen — qué va con Elementor y qué con widget HTML + CSS del child theme
-
-| Sección | Implementación |
-|---|---|
-| TopBar | Elementor H&F Builder, widgets Text + Icon |
-| Navbar | Elementor + Max Mega Menu + myStickymenu |
-| Hero home (slider) | Smart Slider 3 |
-| Hero páginas internas | Elementor Section con background gradient + widgets Heading / Text / Buttons |
-| Strip de stats | Widget HTML + CSS del child theme |
-| Acceso rápido (trámites) | Widget HTML + CSS del child theme |
-| Noticias | **Search & Filter** + CPT "Noticias" + template PHP del child theme |
-| Banner Visado | Elementor Section con widgets nativos |
-| Capacitación | CPT "Cursos" + Search & Filter (si se quieren filtros) o widget HTML |
-| Normativa | CPT "Resoluciones" + Search & Filter + PDF Embedder + template PHP |
-| Institucional (resumen home) | Widget HTML + CSS del child theme |
-| Contacto | Elementor Section + widget Shortcode con Fluent Forms |
-| Autoridades (institucional) | Widget HTML (recomendado) o CPT + Pods |
-| Partidos | Widget HTML + JS search del child theme |
-| Sedes | Widget HTML + CSS del child theme |
-| **Subcomisiones** | Widget HTML + JS search del child theme |
-| Footer | Elementor H&F Builder |
-
-### 10. Costo total del stack
-**$0 USD en licencias de software.** Solo se paga hosting + dominio. Todos los plugins listados son free indefinidos (no son trials).
+1. **Astra Pro**: activar "Sticky Header", configurar Top Bar nativa con teléfono + email. Usar Header Builder para la navbar con megamenú.
+2. **Elementor Pro**: construir cada sección como un "Elementor Section" dentro de una Template de página completa (`canvas` page template para evitar márgenes del theme).
+3. **El hero slider** puede implementarse con el widget **Slides** de Elementor Pro o con **Smart Slider 3** (plugin gratuito recomendado para más control).
+4. **Formulario de contacto**: usar **WPForms Lite** o el widget Form de Elementor. El destino del email debe ser `info@cipba.org`.
+5. **Fuentes**: agregar en Astra → Apariencia → Tipografía: **Lato** (cuerpo) y **Roboto Condensed** (títulos).
+6. **Colores globales**: cargar el token `--blue-deep: #0d2d5e` y `--green: #2a9e2a` como colores globales en Elementor → Site Settings → Global Colors.
