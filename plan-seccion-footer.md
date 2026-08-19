@@ -1,16 +1,16 @@
 # Sección 11 — Footer: instrucciones WordPress
 
-**Stack**: Elementor Free + Astra Free + **"Header, Footer & Blocks for Elementor"** (plugin gratuito para aplicar el footer globalmente).
+**Stack**: Elementor Free + Astra Free + **"Ultimate Addons for Elementor (UAE)"** (plugin gratuito para aplicar el footer globalmente).
 
 **Estrategia CSS**: igual que las secciones anteriores — `<style>` dentro del widget HTML para estilos locales y hover, CSS Adicional para logo, descripción brand y responsive.
 
 ---
 
-## Plugin necesario: "Header, Footer & Blocks for Elementor"
+## Plugin necesario: "Ultimate Addons for Elementor (UAE)"
 
-Para que el footer aparezca en **todas las páginas** del sitio (no solo en la home), se requiere este plugin gratuito de Brainstorm Force.
+Para que el footer aparezca en **todas las páginas** del sitio (no solo en la home), se requiere este plugin gratuito de Brainstorm Force. Es el sucesor de "Elementor Header & Footer Builder" / "Header Footer & Blocks for Elementor" — mismas funciones, plugin renombrado.
 
-**Instalar**: Plugins → Añadir nuevo → buscar `"Header Footer & Blocks for Elementor"` → Instalar y activar.
+**Instalar**: Plugins → Añadir nuevo → buscar `"Ultimate Addons for Elementor"` (slug `header-footer-elementor`) → Instalar y activar.
 
 Sin este plugin, Elementor Free no puede crear plantillas globales de footer — eso es una función exclusiva de Elementor Pro. El plugin lo habilita sin costo.
 
@@ -42,10 +42,10 @@ Sin este plugin, Elementor Free no puede crear plantillas globales de footer —
 
 ## Paso 1 — Crear la plantilla de footer
 
-1. Ir a **Apariencia → Header Footer & Blocks → Añadir nuevo**.
-2. Tipo: **Footer**.
-3. En **Display On**: seleccionar **Entire Site**.
-4. Abrir con Elementor.
+1. Ir a **UAE → Header & Footer Builder → Add New**.
+2. Tipo (Type): **Footer**.
+3. En **Display Location**: seleccionar **Entire Site**.
+4. Publicar y abrir con Elementor.
 
 ---
 
@@ -253,5 +253,5 @@ En **Apariencia → Personalizar → CSS Adicional**:
 | Columna Servicios | HTML | Solo HTML (reutiliza clases) |
 | Barra copyright | HTML | `<style>` embebido (`.footer-bar`) |
 
-**Plugin extra**: "Header, Footer & Blocks for Elementor" (free) — imprescindible para que el footer aplique globalmente.  
+**Plugin extra**: "Ultimate Addons for Elementor (UAE)" (free) — imprescindible para que el footer aplique globalmente.  
 **Sin widgets Pro. Sin plugins de pago.**

@@ -30,7 +30,7 @@ El proyecto se implementa **exclusivamente con plugins y themes free**. Esta res
 | Theme base | **Astra** (free) | Theme principal. Configurar las páginas con la plantilla **Elementor Canvas** (sin header/footer del theme) para que el header y footer custom dominen el layout. |
 | Child theme | Astra child theme | **Imprescindible**. Aloja variables CSS, estilos custom, JS sticky-header y templates PHP de los listados. |
 | Page builder | **Elementor** (free) | Construcción de páginas. |
-| Header / Footer builder | **Elementor Header & Footer Builder** (by Brainstorm Force) | **Imprescindible** — Elementor free no permite editar header/footer; este plugin sí, y es compatible con Astra. |
+| Header / Footer builder | **Ultimate Addons for Elementor (UAE)** (by Brainstorm Force) — antes "Elementor Header & Footer Builder" / "Header Footer & Blocks for Elementor" | **Imprescindible** — Elementor free no permite editar header/footer; este plugin sí, y es compatible con Astra. Se gestiona desde **UAE → Header & Footer Builder**. |
 | Mega menú | **Max Mega Menu** (free) | Dropdowns del navbar (Astra Mega Menu es Pro). |
 | Sticky header | **myStickymenu** (free) + CSS custom | Header sticky con cambio de fondo al scrollear (Astra Sticky Header es Pro). |
 | Slider del hero (home) | **Smart Slider 3** (free) | Slides del hero (widget Slides de Elementor es Pro). |
@@ -51,7 +51,7 @@ El proyecto se implementa **exclusivamente con plugins y themes free**. Esta res
 | Megamenú del navbar | Astra Mega Menu es Pro. | **Max Mega Menu**, configurar el ítem "Institucional" como mega menu con sub-items Autoridades / Partidos / Sedes / Subcomisiones. |
 | Slider del hero con widget Slides | Es Pro. | **Smart Slider 3** free (más control y mejor performance que el widget Slides). |
 | Form widget en Elementor | Es Pro. | **Fluent Forms** + widget Shortcode de Elementor para embeberlo. |
-| Header/Footer hechos con Elementor | Theme Builder de Elementor es Pro. | **Elementor Header & Footer Builder** (free) — permite asignar plantillas hechas con Elementor a todo el sitio. |
+| Header/Footer hechos con Elementor | Theme Builder de Elementor es Pro. | **Ultimate Addons for Elementor (UAE)** (free) — permite asignar plantillas hechas con Elementor a todo el sitio desde **UAE → Header & Footer Builder**. |
 | Custom posts loop (Noticias, Resoluciones, etc.) | Widget Posts de Elementor es Pro. | Para listados que cambian con frecuencia: **Search & Filter** + template PHP del child theme con `WP_Query`. Para listados casi estáticos (Autoridades, Sedes, Subcomisiones): construir con widget HTML de Elementor + CSS del child theme. |
 | Hover effects custom (translateY, sombra) | El widget Box/Image de Elementor free tiene pocos efectos. | Markup en widget HTML + CSS del child theme (`:hover { transform: translateY(-3px); }`). |
 | Tipografías globales por sección H1-H6 | Astra free maneja H1-H6 globales (sí está en free). | OK con Astra free, no requiere workaround. |
